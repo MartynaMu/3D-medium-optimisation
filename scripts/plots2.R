@@ -34,7 +34,7 @@ a <- ggline(filter(df,!is.na(Formula)),
         axis.ticks.y = element_blank(),
         axis.title.y = element_blank())+
   #stat_compare_means(aes(group = Supp),label = "p.signif") 
-  stat_compare_means(label = "p.signif", vjust=0.9)
+  stat_compare_means(label = "p.signif", vjust=0.9, method = "anova")
 
 c <- ggline(filter(df,is.na(Formula)), 
             x = "Day",
